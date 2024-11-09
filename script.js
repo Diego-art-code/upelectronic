@@ -18,13 +18,19 @@ function updateCart() {
     let total = 0;
     
     // Agregar cada producto en el carrito al HTML
-    cart.forEach((item, index) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${item.name} - $${item.price.toLocaleString()} COP`;
-        cartItems.appendChild(listItem);
-        
-        total += item.price;
-    });
+    if (cart.length === 0) {
+        const emptyMessage = document.createElement("li");
+        emptyMessage.textContent = "El carrito está vacío.";
+        cartItems.appendChild(emptyMessage);
+    } else {
+        cart.forEach((item, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.name} - $${item.price.toLocaleString()} COP`;
+            cartItems.appendChild(listItem);
+            
+            total += item.price;
+        });
+    }
     
     // Actualizar el precio total
     totalPriceElement.textContent = `Total: $${total.toLocaleString()} COP`;
