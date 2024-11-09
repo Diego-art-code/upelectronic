@@ -1,3 +1,9 @@
+function toggleMenu() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Código del carrito de compras
 let cart = [];  // Array para almacenar los productos en el carrito
 
 function addToCart(productName, productPrice) {
@@ -30,7 +36,6 @@ function clearCart() {
     alert("Carrito vaciado");
 }
 
-// Función para abrir el carrito en modal
 function openCart() {
     document.getElementById("cart-modal").style.display = "flex";
 }
