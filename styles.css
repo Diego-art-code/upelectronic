@@ -44,6 +44,45 @@ header .icons img {
     width: 20px;
     margin-left: 20px;
 }
+/* Estilo del carrito */
+.cart-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.cart-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-container li {
+    margin-bottom: 10px;
+}
+
+#cart-list {
+    overflow-y: auto;
+    height: 80%;
+}
+
+#close-cart-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0d99ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#close-cart-button:hover {
+    background-color: #005cbf;
+}
 
 .hero-section {
     background: url('fondo.png') no-repeat center center/cover;
