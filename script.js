@@ -1,4 +1,4 @@
-// Carrito
+// Carrito: obtenemos los productos del localStorage o iniciamos con un arreglo vacío
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Elementos del carrito
@@ -8,12 +8,12 @@ const cartList = document.getElementById('cart-list');
 const checkoutButton = document.getElementById('checkout-button');
 const closeCartButton = document.getElementById('close-cart-button');
 
-// Botones de "Agregar al carrito"
-const buttons = document.querySelectorAll('.add-to-cart');
+// Botones de "Agregar al carrito" en los productos
+const buttons = document.querySelectorAll('.product-card button');
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
-        const name = event.target.dataset.name;
-        const price = parseInt(event.target.dataset.price);
+        const name = event.target.closest('.product-card').querySelector('h3').textContent;
+        const price = parseInt(event.target.closest('.product-card').querySelector('p').textContent.replace('$', '').replace(',', '').trim());
 
         agregarAlCarrito(name, price);
     });
@@ -36,7 +36,7 @@ function agregarAlCarrito(name, price) {
     actualizarCarrito();
 }
 
-// Función para actualizar el contador de productos en el icono
+// Función para actualizar el contador de productos en el ícono
 function actualizarCarrito() {
     const carritoCount = document.querySelector('.cart-icon span');
     if (carritoCount) {
@@ -71,7 +71,7 @@ function mostrarCarrito() {
 
 // Función para cerrar el carrito
 closeCartButton.addEventListener('click', () => {
-    cartContainer.style.display = 'none';
+    cartContainer.style.display = 'none'; // Oculta el carrito
 });
 
 // Actualiza el carrito al cargar la página
@@ -98,9 +98,8 @@ function startCountdown() {
     }, 1000);
 }
 
-
 // Llamar a la función para actualizar el carrito cuando se cargue la página
 actualizarCarrito();
 
-
+// Llamar a la función del contador de ofertas
 startCountdown();
