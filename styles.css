@@ -1,39 +1,106 @@
-/* Estilos del Encabezado */
+/* Encabezado Moderno */
 header {
-    background-color: #005b96;
+    background: linear-gradient(90deg, #005b96, #007acc);
+    color: #fff;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 150px; /* Ajusta el tamaño según lo necesites */
-    margin-right: 1rem;
+    width: 150px;
+    height: auto;
 }
 
-nav a {
+nav.desktop-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav.desktop-menu a {
     color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
 }
 
-nav a img {
-    width: 24px;
-    vertical-align: middle;
+nav.desktop-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s;
 }
 
-nav a:hover {
+nav.desktop-menu a:hover::after {
+    width: 100%;
+}
+
+nav.desktop-menu a:hover {
     color: #ffcc00;
 }
 
-/* Estilos para Hero Section */
+/* Icono del menú móvil */
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Menú móvil */
+nav.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007acc;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav.mobile-menu a:hover {
+    background-color: #005b96;
+}
+
+/* Media Query para Móviles */
+@media (max-width: 768px) {
+    nav.desktop-menu {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+
+/* Hero Section */
 #hero {
     background: url('hero-background.jpg') center/cover fixed no-repeat;
     color: white;
@@ -64,43 +131,3 @@ nav a:hover {
 .btn-primary:hover {
     background-color: #c13c1a;
 }
-
-/* Estilos para Categorías Destacadas */
-#categories {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: #f4f4f4;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 0 2rem;
-}
-
-.category-card {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.category-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.category-card h3 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
-}
-
-.category-card:hover {
-   
