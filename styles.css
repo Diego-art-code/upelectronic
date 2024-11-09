@@ -1,9 +1,9 @@
 /* Estilos básicos */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     color: #333;
 }
 
@@ -11,65 +11,38 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-header img {
-    display: block;
-    margin: 0 auto;
+header .logo img {
+    max-width: 150px;
 }
 
-/* Estilos del menú desplegable */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #555;
-}
-
-/* Contenido del menú desplegable */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+header nav a {
+    color: #fff;
+    margin-left: 2rem;
     text-decoration: none;
-    display: block;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Mostrar el menú cuando el usuario pasa el mouse sobre el botón */
-.dropdown:hover .dropdown-content {
-    display: block;
+header nav a:hover {
+    color: #ddd;
 }
 
 /* Secciones */
-section {
-    padding: 2rem;
+.content-section {
+    padding: 5rem 2rem 2rem;
+    max-width: 1200px;
+    margin: auto;
     text-align: center;
 }
 
@@ -78,16 +51,16 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .product {
     background-color: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    width: 200px;
-    text-align: left;
+    padding: 1.5rem;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
     transition: transform 0.2s;
 }
 
@@ -95,63 +68,37 @@ section {
     transform: scale(1.05);
 }
 
-.product img {
+.product-image {
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .product h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
+    color: #333;
 }
 
 .product p {
-    margin: 0.3rem 0;
+    color: #777;
+    margin: 0.5rem 0;
 }
 
 .product button {
     background-color: #333;
     color: #fff;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    margin-top: 0.5rem;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 .product button:hover {
     background-color: #555;
-}
-
-/* Carrito de Compras */
-#cart {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-#cart ul {
-    list-style: none;
-    padding: 0;
-}
-
-#cart li {
-    margin: 0.5rem 0;
-}
-
-#cart button {
-    background-color: #d9534f;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-}
-
-#cart button:hover {
-    background-color: #c9302c;
 }
 
 /* Formulario de Contacto */
@@ -162,16 +109,22 @@ form {
     margin: 0 auto;
 }
 
-form input, form textarea, form button {
+form input, form textarea {
+    padding: 0.75rem;
     margin: 0.5rem 0;
-    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 form button {
     background-color: #333;
     color: #fff;
+    padding: 0.75rem;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
