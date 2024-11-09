@@ -4,110 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpElectronics - Tienda de Componentes Electrónicos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Encabezado -->
-   <!-- Encabezado -->
-<header>
-    <img src="logo.png" alt="Logo de UpElectronics" width="150">
-    <h1>UpElectronics</h1>
-    <p>Tu tienda de componentes electrónicos a un clic de distancia</p>
-
-    <!-- Menú desplegable -->
-    <div class="dropdown">
-        <button class="dropbtn">Menú</button>
-        <div class="dropdown-content">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de UpElectronics" width="150">
+        </div>
+        <nav>
             <a href="#about">Sobre Nosotros</a>
             <a href="#catalog">Catálogo</a>
             <a href="#services">Asesoría</a>
             <a href="#location">Ubicación</a>
             <a href="#contact">Contáctanos</a>
-            <a href="#cart">Carrito de Compras</a>
-        </div>
-    </div>
-</header>
-
+            <a href="#cart">Carrito</a>
+        </nav>
+    </header>
 
     <!-- Sección de Sobre Nosotros -->
-    <section id="about">
+    <section id="about" class="content-section">
         <h2>Sobre Nosotros</h2>
         <p>UpElectronics es una tienda especializada en la venta de componentes electrónicos para estudiantes y entusiastas de la tecnología. Nuestra misión es facilitar el acceso a componentes de difícil acceso en la región.</p>
     </section>
 
     <!-- Sección de Catálogo -->
-    <section id="catalog">
+    <section id="catalog" class="content-section">
         <h2>Catálogo de Productos</h2>
 
         <div class="product">
-            <img src="images/microcontrolador.jpg" alt="Microcontrolador" width="150">
+            <img src="microcontrolador.jpg" alt="Microcontrolador" class="product-image">
             <h3>Microcontroladores</h3>
             <p>Precio: $25,000 COP</p>
             <button onclick="addToCart('Microcontroladores', 25000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="resistencias.jpg" alt="Resistencias y Capacitores" width="150">
+            <img src="resistencias.jpg" alt="Resistencias y Capacitores" class="product-image">
             <h3>Resistencias y Capacitores</h3>
             <p>Precio: $2,000 COP</p>
             <button onclick="addToCart('Resistencias y Capacitores', 2000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="transistor.jfif" alt="Transistor" width="150">
+            <img src="transistor.jpg" alt="Transistor" class="product-image">
             <h3>Transistores</h3>
             <p>Precio: $3,000 COP</p>
             <button onclick="addToCart('Transistores', 3000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="led.jpg" alt="Diodo LED" width="150">
+            <img src="led.jpg" alt="Diodo LED" class="product-image">
             <h3>Diodos LED</h3>
             <p>Precio: $500 COP</p>
             <button onclick="addToCart('Diodos LED', 500)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="sensor_temperatura.jpg" alt="Sensor de Temperatura" width="150">
+            <img src="sensor_temperatura.jpg" alt="Sensor de Temperatura" class="product-image">
             <h3>Sensores de Temperatura</h3>
             <p>Precio: $15,000 COP</p>
             <button onclick="addToCart('Sensores de Temperatura', 15000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="osciloscopio.jpg" alt="Osciloscopio Portátil" width="150">
+            <img src="osciloscopio.jpg" alt="Osciloscopio Portátil" class="product-image">
             <h3>Osciloscopios Portátiles</h3>
             <p>Precio: $350,000 COP</p>
             <button onclick="addToCart('Osciloscopios Portátiles', 350000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="soldadura.jpg" alt="Estación de Soldadura" width="150">
+            <img src="soldadura.jpg" alt="Estación de Soldadura" class="product-image">
             <h3>Estaciones de Soldadura</h3>
             <p>Precio: $120,000 COP</p>
             <button onclick="addToCart('Estaciones de Soldadura', 120000)">Añadir al carrito</button>
         </div>
 
         <div class="product">
-            <img src="fuente_alimentacion.jpg" alt="Fuente de Alimentación" width="150">
+            <img src="fuente_alimentacion.jpg" alt="Fuente de Alimentación" class="product-image">
             <h3>Fuentes de Alimentación</h3>
             <p>Precio: $80,000 COP</p>
             <button onclick="addToCart('Fuentes de Alimentación', 80000)">Añadir al carrito</button>
         </div>
-        
-        <!-- Añade más productos según sea necesario -->
-    </section>
-
-    <!-- Sección de Carrito de Compras -->
-    <section id="cart">
-        <h2>Carrito de Compras</h2>
-        <ul id="cartItems"></ul>
-        <p id="totalPrice">Total: $0 COP</p>
-        <button onclick="clearCart()">Vaciar Carrito</button>
     </section>
 
     <!-- Sección de Contacto -->
-    <section id="contact">
+    <section id="contact" class="content-section">
         <h2>Contáctanos</h2>
         <form>
             <label for="name">Nombre:</label>
