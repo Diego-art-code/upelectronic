@@ -3,137 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpElectronics - Innovación en Electrónica</title>
+    <title>UpElectronic - Tienda de Electrónica</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Encabezado Moderno con Logo e Iconos -->
     <header>
-        <div class="header-content">
-            <img src="logo-upelectronics.png" alt="UpElectronics Logo" class="logo">
-            <nav class="desktop-menu">
-                <a href="#about">Sobre Nosotros</a>
-                <a href="#catalog">Catálogo</a>
-                <a href="#services">Asesoría</a>
-                <a href="#location">Ubicación</a>
-                <a href="#contact">Contáctanos</a>
-                <a href="#cart"><img src="cart-icon.png" alt="Carrito"></a>
-                <a href="#account"><img src="user-icon.png" alt="Usuario"></a>
-            </nav>
-            <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo UpElectronic">
         </div>
-        <nav class="mobile-menu">
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#catalog">Catálogo</a>
-            <a href="#services">Asesoría</a>
-            <a href="#location">Ubicación</a>
-            <a href="#contact">Contáctanos</a>
-            <a href="#cart">Carrito</a>
-            <a href="#account">Usuario</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#offers">Ofertas</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </nav>
+        <div class="icons">
+            <a href="#"><img src="search-icon.png" alt="Buscar"></a>
+            <a href="#" class="cart-icon">🛒</a>
+        </div>
     </header>
 
-    <!-- Hero Section con Parallax -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>UpElectronics</h1>
-            <p>Todo lo que necesitas para tus proyectos electrónicos, a un solo clic</p>
-            <a href="#catalog" class="btn-primary">Explora el Catálogo</a>
+    <section id="hero" class="hero-section">
+        <div class="hero-text">
+            <h1>Electrónica de Última Generación a un Clic de Distancia</h1>
+            <a href="#products" class="btn">Explorar Productos</a>
+            <a href="#offers" class="btn">Ver Ofertas</a>
         </div>
     </section>
 
-    <!-- Sección de Categorías Populares -->
-    <section id="categories">
-        <h2>Categorías Populares</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="microcontroladores.jpg" alt="Microcontroladores">
-                <h3>Microcontroladores</h3>
-            </div>
-            <div class="category-card">
-                <img src="resistencias-capacitores.jpg" alt="Resistencias y Capacitores">
-                <h3>Resistencias y Capacitores</h3>
-            </div>
-            <div class="category-card">
-                <img src="transistores.jpg" alt="Transistores">
-                <h3>Transistores</h3>
-            </div>
-            <div class="category-card">
-                <img src="diodos-led.jpg" alt="Diodos LED">
-                <h3>Diodos LED</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Catálogo de Productos -->
-    <section id="catalog">
-        <h2>Catálogo de Productos</h2>
+    <section id="products" class="products-section">
+        <h2>Productos Destacados</h2>
         <div class="product-grid">
-            <!-- Productos -->
+            <!-- Microcontroladores -->
             <div class="product-card">
-                <h4>Microcontrolador ATmega328P</h4>
-                <img src="atmega328p.jpg" alt="Microcontrolador ATmega328P">
-                <p>Precio: $25,000 COP</p>
-                <button onclick="addToCart('Microcontrolador ATmega328P', 25000)">Añadir al carrito</button>
+                <img src="microcontroladores.jpg" alt="Microcontrolador">
+                <h3>Microcontrolador</h3>
+                <p>$15.99</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Resistencias y Capacitores -->
             <div class="product-card">
-                <h4>Resistencias y Capacitores</h4>
-                <img src="resistencias-capacitores.jpg" alt="Resistencias y Capacitores">
-                <p>Precio: $2,000 COP</p>
-                <button onclick="addToCart('Resistencias y Capacitores', 2000)">Añadir al carrito</button>
+                <img src="resistencias.jpg" alt="Resistencias y Capacitores">
+                <h3>Resistencias y Capacitores</h3>
+                <p>$2.99</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Transistores -->
             <div class="product-card">
-                <h4>Transistores</h4>
-                <img src="transistores.jpg" alt="Transistores">
-                <p>Precio: $3,000 COP</p>
-                <button onclick="addToCart('Transistores', 3000)">Añadir al carrito</button>
+                <img src="transistor.jfif" alt="Transistor">
+                <h3>Transistor</h3>
+                <p>$1.99</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Diodos LED -->
             <div class="product-card">
-                <h4>Diodos LED</h4>
-                <img src="diodos-led.jpg" alt="Diodos LED">
-                <p>Precio: $500 COP</p>
-                <button onclick="addToCart('Diodos LED', 500)">Añadir al carrito</button>
+                <img src="led.jpg" alt="Diodo LED">
+                <h3>Diodo LED</h3>
+                <p>$0.89</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Sensor de Temperatura -->
             <div class="product-card">
-                <h4>Sensor de Temperatura</h4>
-                <img src="sensor-temperatura.jpg" alt="Sensor de Temperatura">
-                <p>Precio: $15,000 COP</p>
-                <button onclick="addToCart('Sensor de Temperatura', 15000)">Añadir al carrito</button>
+                <img src="sensor_temperatura.jpg" alt="Sensor de Temperatura">
+                <h3>Sensor de Temperatura</h3>
+                <p>$8.49</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Osciloscopio Portátil -->
             <div class="product-card">
-                <h4>Osciloscopio Portátil</h4>
                 <img src="osciloscopio.jpg" alt="Osciloscopio Portátil">
-                <p>Precio: $350,000 COP</p>
-                <button onclick="addToCart('Osciloscopio Portátil', 350000)">Añadir al carrito</button>
+                <h3>Osciloscopio Portátil</h3>
+                <p>$250.00</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Estación de Soldadura -->
             <div class="product-card">
-                <h4>Estación de Soldadura</h4>
-                <img src="estacion-soldadura.jpg" alt="Estación de Soldadura">
-                <p>Precio: $120,000 COP</p>
-                <button onclick="addToCart('Estación de Soldadura', 120000)">Añadir al carrito</button>
+                <img src="soldadura.jpg" alt="Estación de Soldadura">
+                <h3>Estación de Soldadura</h3>
+                <p>$120.00</p>
+                <button>Agregar al carrito</button>
             </div>
+            <!-- Fuentes de Alimentación -->
             <div class="product-card">
-                <h4>Fuentes de Alimentación</h4>
-                <img src="fuentes-alimentacion.jpg" alt="Fuentes de Alimentación">
-                <p>Precio: $80,000 COP</p>
-                <button onclick="addToCart('Fuentes de Alimentación', 80000)">Añadir al carrito</button>
+                <img src="fuente_alimentacion.jpg" alt="Fuente de Alimentación">
+                <h3>Fuente de Alimentación</h3>
+                <p>$35.99</p>
+                <button>Agregar al carrito</button>
             </div>
         </div>
     </section>
 
-    <!-- Carrito Modal -->
-    <section id="cart-modal" class="modal">
-        <div class="modal-content">
-            <h2>Carrito de Compras</h2>
-            <ul id="cartItems"></ul>
-            <p id="totalPrice">Total: $0 COP</p>
-            <button onclick="clearCart()" class="btn-secondary">Vaciar Carrito</button>
-            <button class="btn-primary" onclick="closeCart()">Cerrar</button>
+    <section id="offers" class="offers-section">
+        <h2>Ofertas Especiales</h2>
+        <div class="offer-banner">
+            <p>¡Descuentos del 20% en todos los microcontroladores!</p>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <h2>Reseñas de Clientes</h2>
+        <div class="review">
+            <p>"Excelente tienda, muy buenos precios y rápido envío."</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <img src="customer1.jpg" alt="Cliente 1">
+        </div>
+        <div class="review">
+            <p>"Productos de calidad, recomendados al 100%."</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <img src="customer2.jpg" alt="Cliente 2">
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>Últimas Noticias</h2>
+        <div class="blog-post">
+            <h3>Guía de Compra de Microcontroladores</h3>
+            <p>Todo lo que necesitas saber para elegir el microcontrolador ideal para tu proyecto...</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 UpElectronics. Todos los derechos reservados.</p>
+        <div class="contact-info">
+            <p>Tel: (123) 456-7890</p>
+            <p>Email: contacto@upelectronic.com</p>
+            <p>Dirección: Calle Ficticia 123, Ciudad, País</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="useful-links">
+            <a href="#">Política de Devolución</a>
+            <a href="#">Términos de Servicio</a>
+            <a href="#">FAQ</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
