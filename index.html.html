@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpElectronics - Tienda de Componentes Electrónicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>UpElectronics</h1>
+        <p>Tu tienda de componentes electrónicos a un clic de distancia</p>
+        <nav>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#catalog">Catálogo</a>
+            <a href="#services">Asesoría</a>
+            <a href="#location">Ubicación</a>
+            <a href="#contact">Contáctanos</a>
+            <a href="#cart">Carrito de Compras</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Sobre Nosotros -->
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>UpElectronics es una tienda especializada en la venta de componentes electrónicos para estudiantes y entusiastas de la tecnología. Nuestra misión es facilitar el acceso a componentes de difícil acceso en la región.</p>
+    </section>
+
+    <!-- Sección de Catálogo -->
+    <section id="catalog">
+        <h2>Catálogo de Productos</h2>
+
+        <div class="product">
+            <h3>Microcontroladores</h3>
+            <p>Precio: $25,000 COP</p>
+            <button onclick="addToCart('Microcontroladores', 25000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Resistencias y Capacitores</h3>
+            <p>Precio: $2,000 COP</p>
+            <button onclick="addToCart('Resistencias y Capacitores', 2000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Transistores</h3>
+            <p>Precio: $3,000 COP</p>
+            <button onclick="addToCart('Transistores', 3000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Diodos LED</h3>
+            <p>Precio: $500 COP</p>
+            <button onclick="addToCart('Diodos LED', 500)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Sensores de Temperatura</h3>
+            <p>Precio: $15,000 COP</p>
+            <button onclick="addToCart('Sensores de Temperatura', 15000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Osciloscopios Portátiles</h3>
+            <p>Precio: $350,000 COP</p>
+            <button onclick="addToCart('Osciloscopios Portátiles', 350000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Estaciones de Soldadura</h3>
+            <p>Precio: $120,000 COP</p>
+            <button onclick="addToCart('Estaciones de Soldadura', 120000)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <h3>Fuentes de Alimentación</h3>
+            <p>Precio: $80,000 COP</p>
+            <button onclick="addToCart('Fuentes de Alimentación', 80000)">Añadir al carrito</button>
+        </div>
+
+        <!-- Puedes añadir más productos de forma similar -->
+    </section>
+
+    <!-- Sección de Carrito de Compras -->
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: $0 COP</p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: (+57) 3153429495</p>
+        <p>Email: contacto@upelectronics.com</p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 UpElectronics. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
