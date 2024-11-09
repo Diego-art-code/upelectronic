@@ -1,0 +1,139 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Productos */
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    width: 200px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    margin: 0.3rem 0;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+/* Carrito de Compras */
+#cart {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cart li {
+    margin: 0.5rem 0;
+}
+
+#cart button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#cart button:hover {
+    background-color: #c9302c;
+}
+
+/* Formulario de Contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
