@@ -1,12 +1,11 @@
 let cart = [];  // Array para almacenar los productos en el carrito
 
-// Función para añadir productos al carrito
 function addToCart(productName, productPrice) {
     cart.push({ name: productName, price: productPrice });
     updateCart();
+    openCart();
 }
 
-// Función para actualizar la visualización del carrito
 function updateCart() {
     const cartItems = document.getElementById("cartItems");
     const totalPriceElement = document.getElementById("totalPrice");
@@ -25,21 +24,17 @@ function updateCart() {
     totalPriceElement.textContent = `Total: $${total.toLocaleString()} COP`;
 }
 
-// Función para vaciar el carrito
 function clearCart() {
     cart = [];
     updateCart();
     alert("Carrito vaciado");
 }
 
-// Función para filtrar productos por categoría
-function filterByCategory(category) {
-    const allProducts = document.querySelectorAll(".product-category");
-    allProducts.forEach((productCategory) => {
-        if (category === "all" || productCategory.classList.contains(category)) {
-            productCategory.style.display = "block";
-        } else {
-            productCategory.style.display = "none";
-        }
-    });
+// Función para abrir el carrito en modal
+function openCart() {
+    document.getElementById("cart-modal").style.display = "flex";
+}
+
+function closeCart() {
+    document.getElementById("cart-modal").style.display = "none";
 }
