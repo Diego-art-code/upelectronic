@@ -4,101 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpElectronics - Tienda de Componentes Electrónicos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Encabezado -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo de UpElectronics">
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="#catalog">Catálogo</a></li>
-                    <li><a href="#services">Asesoría</a></li>
-                    <li><a href="#location">Ubicación</a></li>
-                    <li><a href="#contact">Contáctanos</a></li>
-                    <li><a href="#cart">Carrito</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img src="logo.png" alt="UpElectronics Logo" class="logo">
+        <nav>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#catalog">Catálogo</a>
+            <a href="#services">Asesoría</a>
+            <a href="#location">Ubicación</a>
+            <a href="#contact">Contáctanos</a>
+            <a href="#cart"><img src="cart-icon.png" alt="Carrito"></a>
+            <a href="#account"><img src="user-icon.png" alt="Usuario"></a>
+        </nav>
     </header>
 
     <!-- Sección de Sobre Nosotros -->
-    <section id="about" class="content-section">
-        <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <p>En UpElectronics, ofrecemos componentes electrónicos de calidad para estudiantes, entusiastas y profesionales de la tecnología. Nuestro objetivo es facilitar el acceso a productos de difícil obtención en la región.</p>
-        </div>
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>UpElectronics es una tienda especializada en la venta de componentes electrónicos para estudiantes y entusiastas de la tecnología. Nuestra misión es facilitar el acceso a componentes de difícil acceso en la región.</p>
     </section>
 
     <!-- Sección de Catálogo -->
-    <section id="catalog" class="content-section">
-        <div class="container">
-            <h2>Catálogo de Productos</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="microcontrolador.jpg" alt="Microcontrolador">
-                    <h3>Microcontroladores</h3>
-                    <p class="price">$25,000 COP</p>
-                    <button onclick="addToCart('Microcontroladores', 25000)">Añadir al carrito</button>
-                </div>
+    <section id="catalog">
+        <h2>Catálogo de Productos</h2>
 
-                <div class="product-card">
-                    <img src="resistencias.jpg" alt="Resistencias y Capacitores">
-                    <h3>Resistencias y Capacitores</h3>
-                    <p class="price">$2,000 COP</p>
-                    <button onclick="addToCart('Resistencias y Capacitores', 2000)">Añadir al carrito</button>
-                </div>
+        <!-- Categoría Microcontroladores -->
+        <div class="product-category">
+            <h3>Microcontroladores</h3>
+            <div class="product">
+                <h4>ATmega328P</h4>
+                <p>Precio: $25,000 COP</p>
+                <button onclick="addToCart('ATmega328P', 25000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>ESP8266</h4>
+                <p>Precio: $30,000 COP</p>
+                <button onclick="addToCart('ESP8266', 30000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Arduino Uno R3</h4>
+                <p>Precio: $40,000 COP</p>
+                <button onclick="addToCart('Arduino Uno R3', 40000)">Añadir al carrito</button>
+            </div>
+        </div>
 
-                <div class="product-card">
-                    <img src="transistor.jpg" alt="Transistor">
-                    <h3>Transistores</h3>
-                    <p class="price">$3,000 COP</p>
-                    <button onclick="addToCart('Transistores', 3000)">Añadir al carrito</button>
-                </div>
+        <!-- Categoría Componentes Pasivos -->
+        <div class="product-category">
+            <h3>Componentes Pasivos</h3>
+            <div class="product">
+                <h4>Resistencias 1K Ohm</h4>
+                <p>Precio: $2,000 COP</p>
+                <button onclick="addToCart('Resistencias 1K Ohm', 2000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Capacitores 100uF</h4>
+                <p>Precio: $1,500 COP</p>
+                <button onclick="addToCart('Capacitores 100uF', 1500)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Bobina 10uH</h4>
+                <p>Precio: $3,000 COP</p>
+                <button onclick="addToCart('Bobina 10uH', 3000)">Añadir al carrito</button>
+            </div>
+        </div>
 
-                <div class="product-card">
-                    <img src="led.jpg" alt="Diodo LED">
-                    <h3>Diodos LED</h3>
-                    <p class="price">$500 COP</p>
-                    <button onclick="addToCart('Diodos LED', 500)">Añadir al carrito</button>
-                </div>
+        <!-- Categoría Sensores -->
+        <div class="product-category">
+            <h3>Sensores</h3>
+            <div class="product">
+                <h4>Sensor de Temperatura LM35</h4>
+                <p>Precio: $15,000 COP</p>
+                <button onclick="addToCart('Sensor de Temperatura LM35', 15000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Sensor Ultrasónico HC-SR04</h4>
+                <p>Precio: $18,000 COP</p>
+                <button onclick="addToCart('Sensor Ultrasónico HC-SR04', 18000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Sensor de Gas MQ-2</h4>
+                <p>Precio: $20,000 COP</p>
+                <button onclick="addToCart('Sensor de Gas MQ-2', 20000)">Añadir al carrito</button>
+            </div>
+        </div>
 
-                <!-- Más productos se pueden añadir de la misma manera -->
+        <!-- Categoría Herramientas -->
+        <div class="product-category">
+            <h3>Herramientas</h3>
+            <div class="product">
+                <h4>Multímetro Digital</h4>
+                <p>Precio: $80,000 COP</p>
+                <button onclick="addToCart('Multímetro Digital', 80000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Estación de Soldadura</h4>
+                <p>Precio: $120,000 COP</p>
+                <button onclick="addToCart('Estación de Soldadura', 120000)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <h4>Pinzas Antiestáticas</h4>
+                <p>Precio: $10,000 COP</p>
+                <button onclick="addToCart('Pinzas Antiestáticas', 10000)">Añadir al carrito</button>
             </div>
         </div>
     </section>
 
+    <!-- Sección de Carrito de Compras -->
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: $0 COP</p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </section>
+
     <!-- Sección de Contacto -->
-    <section id="contact" class="content-section">
-        <div class="container">
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" required>
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
 
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
 
-                <label for="message">Mensaje:</label>
-                <textarea id="message" required></textarea>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" required></textarea>
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p>Teléfono: (+57) 3153429495</p>
-            <p>Email: contacto@upelectronics.com</p>
-        </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: (+57) 3153429495</p>
+        <p>Email: contacto@upelectronics.com</p>
     </section>
 
     <!-- Pie de página -->
     <footer>
-        <div class="container footer-container">
-            <p>&copy; 2024 UpElectronics. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2024 UpElectronics. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
